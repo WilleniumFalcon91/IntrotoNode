@@ -15,5 +15,8 @@ rl.question('what is the filename?', (filename) => {
             return;
         }
         console.log('I found the file!');
+        let content = buffer.toString();
+        let upcased = content.toLocaleUpperCase();
+        console.log(upcased);
     });
 });
