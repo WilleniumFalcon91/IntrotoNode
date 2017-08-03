@@ -7,6 +7,12 @@ const rl = readline.createInterface({
 });
 
 rl.question('what is the filename?', (filename) => {
-    console.log('confirmed');
+    console.log(filename + ' confirmed');
     rl.close();
-})
+    fs.readFile(filename, (err, buffer) => {
+        if(err) {
+            console.log(err.message);
+            return;
+        }
+    });
+});
