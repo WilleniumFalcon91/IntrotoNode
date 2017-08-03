@@ -14,5 +14,6 @@ rl.question('what is the filename?', (filename) => {
             console.log(err.message);
             return;
         }
+        console.log('I found the file!');
     });
 });
